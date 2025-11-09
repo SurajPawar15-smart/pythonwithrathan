@@ -105,7 +105,10 @@
 # ✅ Use 'with open()' to handle files safely
 # ✅ Modes: 'r' = read, 'w' = write, 'a' = append
 
-
+#Old way:
+f = open("students.txt","w")
+f.write("Hello World")
+f.close()
 
 
 

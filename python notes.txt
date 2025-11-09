@@ -194,48 +194,259 @@ doubled=double(5)
 print(doubled)
 
 =============================================
+Date: 09/11/2025 Week 1 => Sunday
+Python Foundations - Refresher Session 
+=============================================
 File handling
 =============================================
+use "with open()" to handle files safely
+modes: "r" =read, "w" = write, "a" = append
+
+#Old way:
+f = open("students.txt","w")
+f.write("Hello World")
+f.close()
+
+> ls
+> cd python_refresher
+> python3 refresher.py
+
+create a new file => text.txt
+Welcome to Tech with Rathan live class
+Backend Developer
+
+f = open("test.txt","r")
+content=f.read()
+print(content)
+f.close()
+
+> python3 refresher.py
+
+#Append
+f=open("students.txt","a")
+f.write("\nnd I am fom India")
+f.close()
+
+with open("students.txt","r") as f:
+  content=f.read();
+  print(content)
+
+with open("students.txt","a")as f:
+  f.write("\nTech with Rathan")
 
 =============================================
-Error Hnadling
+Error Handling
 =============================================
+
+try:
+    number=int(input("Enter a number :"))
+    print("10 divided by your number is: ",10/number)
+except ZeroDivisionError:
+    print("Error: ",e)
+    print("You cannot divided by zero")
+except ValueError:
+    print("Please enter a valid number")
+
+=> Python Extension download in vscode
 
 =============================================
 Modules & Packages
 =============================================
+use built-in modules like math, os , random
+you can also create custom modules
+
+from utils import sum
+result=sum(10,20)
+print(result)
+
+test_package => create a folder
+__init__.py
+ test_python.py
+
+=============================================
+Django Framework
+=============================================
+https://www.djangoproject.com
+Django-flow => Model View Template
+
+python --version
+python -m pip freeze
+python -m pip install django
+python -m ensurepip --upgrade
+python -m pip --version
+
+Basic Commands
+cdﾠ: Change directory
+cd ..ﾠ: Go one folder back (up one level)
+dirﾠ: List files and folders in the current directory
+cls: ﾠClear the terminal screen
+exitﾠ: Close the command prompt
+mkdir foldernameﾠ: Create a new folder
+rmdir foldernameﾠ: Remove a folder (only if empty)
+del filename.extﾠ: Delete a file
+copy source destination: ﾠCopy a file
+
+create a new folder => django_test
+we need to create a virtual environment 
+If you want to know more about virtual env :
+https://docs.python.org/3/library/venv.html
+
+=> search the website 
+https://pypl.org/project/Django
+Django 5.2.8
+
+Scripts => windows and bin => mac and Linux
+
+open a terminal =>
+>cd django_test
+django_test>pip freeze
+django_test>python3 -m venv env
+django_test>source env/bin/activate
+or
+django_test>source env\Scripts\activate
+django_test>pip freeze
+django_test>deactivate
+
+(env)django_test>pip freeze
+
+#if you want the specific version
+(env)django_test>pip install django==4.1
+
+#if you want the latest version
+(env)django_test>pip install django
+(env)django_test>pip freeze
+asgiref==3.0.0
+Django==5.2.8
+sqlparse==0.5.3
+
+(env)django_test>django-admin startproject learning .
+(env)django_test>python manage.py runserver
+
+=========================================================
+File and Folder structure
+=========================================================
+learning
+__init__.py => package
+asgi.py
+settings.py
+urls.py
+wsgi.py
+db.sqlite3
+manage.py
 
 
+http://127.0.0.1:8000
 
+=========================================================
+Command to create a Django Project
+==========================================================
+PS F:\pythonwithrathan\django_test> pip freeze
+PS F:\pythonwithrathan\django_test> python -m venv env
+PS F:\pythonwithrathan\django_test> env\Scripts\activate
+(env) PS F:\pythonwithrathan\django_test> pip freeze
+(env) PS F:\pythonwithrathan\django_test> pip install django
+Collecting django
+  Downloading django-5.2.8-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref>=3.8.1 (from django)
+  Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading django-5.2.8-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 4.2 MB/s  0:00:02
+Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.10.0 django-5.2.8 sqlparse-0.5.3 tzdata-2025.2                                                                                     
 
+[notice] A new release of pip is available: 25.2 -> 25.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(env) PS F:\pythonwithrathan\django_test> django-admin startproject learning .
+(env) PS F:\pythonwithrathan\django_test> python manage.py runserver
+(env) PS F:\pythonwithrathan\django_test> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(env) PS F:\pythonwithrathan\django_test> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
 
+System check identified no issues (0 silenced).
+November 09, 2025 - 22:13:53
+Django version 5.2.8, using settings 'learning.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+(env) PS F:\pythonwithrathan\django_test> python manage.py createsuperuser
+Username (leave blank to use 'hp'): djangoadmin
+Email address: developer.suraj@gmail.com
+Password: 
+Password (again):
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: n
+Password: 
+Password (again):
+Superuser created successfully.
+(env) PS F:\pythonwithrathan\django_test> python manage.py runserver      
+Watching for file changes with StatReloader
+Performing system checks...
 
+System check identified no issues (0 silenced).
+November 09, 2025 - 22:23:43
+Django version 5.2.8, using settings 'learning.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
 
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[09/Nov/2025 22:24:06] "GET /admin HTTP/1.1" 301 0
+[09/Nov/2025 22:24:06] "GET /admin/ HTTP/1.1" 302 0
+[09/Nov/2025 22:24:07] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4173
+[09/Nov/2025 22:24:08] "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[09/Nov/2025 22:24:08] "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[09/Nov/2025 22:24:08] "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[09/Nov/2025 22:24:08] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[09/Nov/2025 22:24:08] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[09/Nov/2025 22:24:08] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[09/Nov/2025 22:24:08] "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[09/Nov/2025 22:24:08] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[09/Nov/2025 22:24:08] "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+Not Found: /favicon.ico
+[09/Nov/2025 22:24:08] "GET /favicon.ico HTTP/1.1" 404 2210
+[09/Nov/2025 22:24:25] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[09/Nov/2025 22:24:26] "GET /admin/ HTTP/1.1" 200 6103
+[09/Nov/2025 22:24:26] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[09/Nov/2025 22:24:26] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[09/Nov/2025 22:24:26] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
 
- 
+python manage.py createsuperuser
+Username: djangoadmin
+Email address: developer.suraj@gmail.com
+Password: Sur@j1000
+Password (again): Sur@j1000
+Superuser created successfully
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+http://127.0.0.1:8000/admin
 
 
 
