@@ -1,0 +1,336 @@
+=============================================
+8-Week Live Backend Developer Program
+=============================================
+Date: 08/11/2025 Week 1 => Saturday
+Python Foundations - Refresher Session 
+=============================================
+Data Types
+=============================================
+name="Suraj"
+age=25
+height=5.1
+is_active=True
+print(name)
+print(age)
+
+Run the file in vscode:
+python3 refresher.py
+
+=============================================
+Type Casting
+=============================================
+name="Suraj"
+age=25
+height=5.1
+print(type(name))
+print(type(height))
+
+age1="20"
+age1_int=int(age1)
+print(type(age1_int))
+
+=============================================
+Operators & Expressions
+=============================================
+x=10
+y=20
+sum=x+y
+sub=x-y
+mul=x*y
+div=x/y
+mod=x%y
+exp=x**2
+print(sum)
+
+x=2
+y=3
+x>y
+x>=y
+x==y
+
+=============================================
+strings & user input
+=============================================
+name=input("What is your name: ")
+print(name)
+
+first_name="Suraj"
+last_name="Pawar"
+full_name=first_name+" "+last_name
+print(full_name)
+
+first_name="Suraj"
+last_name="Pawar"
+full_name=first_name+" "+last_name
+age=30
+print("I am Suraj Pawar and I am 30 years old")
+or
+print(f "I am {full_name} and I am {age} years old")
+
+#str.format()
+print("I am {} and I am {} years old...!!!".format(full_name,age))
+
+=============================================
+collection data types
+=============================================
+#list (mutable),Tuple(immutable),set(unique),Dict(key-value)
+
+#list (mutable)
+students=["Rathan","Suraj","Rani","Prashant","Ram","Sita"]
+print(students)
+print(students[2])
+students[2]="Sham"
+print(students)
+
+#Tuple (immutable)
+coordinates=(10.5,20.6)
+print(coordinates)
+
+#set (unique)
+unique_marks={20,98,29,39,49,28}
+print(type(unique_marks))
+
+#Dict (key-value)
+
+student_data={"name":"Suraj","age":30,"marks":90}
+print(student_Data["marks"])
+student_data["marks"]=80
+print(student_Data["marks"])
+
+student_Data["city"]="Mumbai"
+print(student_Data)
+
+del student_Data["age"]
+print(student_Data)
+#loop through dictionary
+
+=============================================
+conditions and loops
+=============================================
+if/ elif/else for conditions
+for and while for iteration
+
+min_pass_mark=35
+marks=70
+if marks>=min_pass_mark:
+  print("Pass")
+elif marks == 35:
+  print("Just pass")
+else:
+  print("Failed")
+
+#for loop
+students=["rathan","suraj","sham","ram"]
+for name in students:
+  print(f"Hello {student}")
+
+for student in reversed(students):
+  print(f"Hello {student}")
+
+#while loop
+
+count=0
+while count< 3:
+  print("Count:",count)
+  print+=1 #count=count+1
+
+a=20
+b=50
+print(sum(a,b))
+
+nums=[10,20,30]
+print(sum(nums))
+
+=============================================
+list comprehensions
+=============================================
+#short way to create new lists using loop
+#common in Django when processing data
+
+numbers=[1,2,3,4,5]
+squared=[]
+for num in numbers:
+  squared.append(num*num)
+print(squared)
+
+squared=[num* num for num in numbers]
+print(squared)
+
+even_numbers=[num or num in numbers if num % 2==0]
+print(even_numbers)
+
+even_numbers=[]
+for num in numbers:
+ if num% 2==2:
+    even_numbers.append(num)
+print(num)
+
+even_numbers=[num for num in numbers if num % 2==0]
+
+
+#expected output:[1,4,9,16,25]
+
+=============================================
+Functions + lambda + map/filter
+=============================================
+#defining the function
+def greet(name):
+  return f"Hello {name}"
+
+#calling the function
+print(greet(name="Rathan"))
+print(greet(name="pranay"))
+
+#lambda function
+a lambda function is a small, anonymous functions, meaning a function without a name
+
+double =lambda x:x*2
+doubled=double(5)
+print(doubled)
+
+def double(x):
+ return x*2
+doubled=double(5)
+print(doubled)
+
+=============================================
+File handling
+=============================================
+
+=============================================
+Error Hnadling
+=============================================
+
+=============================================
+Modules & Packages
+=============================================
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+
+# ================================================================
+#  PYTHON REFRESHER
+#  8-Week Live Backend Developer Program
+#  Instructor: Rathan Kumar
+# ================================================================
+
+# ------------------------------------------------
+# 1. DATA TYPES
+# ------------------------------------------------
+# ✅ Python is dynamically typed (no need to declare types)
+# ✅ Common types: int, float, str, bool
+
+
+
+# Type casting
+# Converting a value from one data type to another
+
+
+# ------------------------------------------------
+# 2. OPERATORS & EXPRESSIONS
+# ------------------------------------------------
+# ✅ Arithmetic: +, -, *, /, %, **
+# ✅ Comparison: ==, !=, >, <, >=, <=
+# ✅ Logical: and, or, not
+
+
+
+# ------------------------------------------------
+# 3. STRINGS & USER INPUT
+# ------------------------------------------------
+# ✅ Strings are immutable
+# ✅ Use f-strings for formatting
+
+
+
+
+# Getting input
+
+
+
+# ------------------------------------------------
+# 4. COLLECTION DATA TYPES
+# ------------------------------------------------
+# ✅ List (mutable), Tuple (immutable), Set (unique), Dict (key-value)
+
+# List - mutable
+
+
+# Tuple - immutable
+
+
+
+# Set - unique
+
+
+# Dictionary - key-value pair
+
+
+# Loop through dictionary
+
+
+
+# ------------------------------------------------
+# 5. CONDITIONS & LOOPS
+# ------------------------------------------------
+# ✅ if/elif/else for conditions
+# ✅ for and while for iteration
+
+
+# For loop
+
+
+# While loop
+
+
+# ------------------------------------------------
+# 6. LIST COMPREHENSIONS
+# ------------------------------------------------
+# ✅ Short way to create new lists using loops
+# ✅ Common in Django when processing data
+
+
+
+# Filter example
+
+
+# ------------------------------------------------
+# 7. FUNCTIONS + LAMBDA + MAP/FILTER
+# ------------------------------------------------
+# ✅ Functions = reusable code blocks
+# ✅ Lambda = short anonymous functions
+# ✅ Map/Filter = apply or filter data from iterables
+
+
+
+# Lambda
+# A lambda function is a small, anonymous function, meaning a function without a name
+
+
+
+# ------------------------------------------------
+# 8. FILE HANDLING
+# ------------------------------------------------
+# ✅ Use 'with open()' to handle files safely
+# ✅ Modes: 'r' = read, 'w' = write, 'a' = append
+
+
+
+
+
+
+# ------------------------------------------------
+# 9. ERROR HANDLING
+# ------------------------------------------------
+# ✅ Use try/except to handle runtime errors gracefully
+# ✅ Always handle specific exceptions
+
+
+
+
+
+
+# ------------------------------------------------
+# 10. MODULES & PACKAGES
+# ------------------------------------------------
+# ✅ Use built-in modules like math, os, random
+# ✅ You can also create custom modules
+
+
+
+
+
+
+
+
+
